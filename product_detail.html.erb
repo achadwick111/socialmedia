@@ -1,0 +1,29 @@
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js">
+</script>
+
+<div class="span6">
+	<button class="btn btn-primary facebookshare" type="button" onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=<%=i['title']%>&p[summary]=<%=i['description']%>,&p[images][0]=<%= @x%> &p[url]=http://<%= session[:url_name]%>.test.com/<%= params[:controller]%>/product_detail?product='+<%=i['product_id']%>,'facebook-share-dialog','width=626,height=436'
+    ); 
+	return false;">
+		<i class="fa fa-facebook"></i>&nbsp; share on facebook
+  </button>
+
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url= "http://<%= session[:url_name]%>.test.com<%= @xx%>" data-text=<%=i['title']%> data-count="vertical" data-via=<%= session[:shop_name]%>>Tweet</a>
+</div>
+
+<style> 
+	.facebookshare
+	{
+		margin-top:20%;
+	}
+	.facebookshare:hover
+	{
+		color: #ffffff;
+		background-color: #0044cc;
+	}
+	.facebookshare:focus
+	{
+		color: #ffffff;
+		background-color: #0044cc;
+	}
+</style>
